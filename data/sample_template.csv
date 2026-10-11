@@ -1,0 +1,4 @@
+date,menu_item,meal_category,meals_prepared,meals_sold,leftover_meals,food_discarded_kg,cost_per_meal,is_holiday,special_event,notes
+2026-10-10,Veg Thali,Lunch,200,185,10,4.5,50.0,0,None,Regular Saturday lunch
+2026-10-10,Chicken Biryani,Lunch,250,240,5,3.0,90.0,0,None,High demand weekend special
+2026-10-11,Paneer Rice Combo,Lunch,180,150,20,8.2,60.0,1,Diwali Holiday,Lower attendance expected

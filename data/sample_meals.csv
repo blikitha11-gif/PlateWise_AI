@@ -1,0 +1,601 @@
+date,menu_item,meal_category,day_of_week,is_weekend,is_holiday,special_event,meals_prepared,meals_sold,leftover_meals,food_discarded_kg,cost_per_meal,notes
+2026-06-01,Veg Thali,Lunch,Monday,0,0,None,265,206,24,10.9,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-01,Chicken Biryani,Lunch,Monday,0,0,None,315,261,16,14.0,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-01,Dal Makhani & Rice,Dinner,Monday,0,0,None,220,186,16,6.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-01,Paneer Roll & Salad,Dinner,Monday,0,0,None,170,140,10,6.3,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-01,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,140,112,10,6.3,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-02,Veg Thali,Lunch,Tuesday,0,0,None,205,168,13,7.9,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-02,Chicken Biryani,Lunch,Tuesday,0,0,None,360,295,26,13.5,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-02,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,195,162,13,6.3,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-02,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,160,126,13,6.5,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-02,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,135,107,8,7.5,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-03,Veg Thali,Lunch,Wednesday,0,0,None,235,192,17,8.9,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-03,Chicken Biryani,Lunch,Wednesday,0,0,None,265,217,23,9.1,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-03,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,190,159,10,6.4,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-03,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,150,122,10,5.8,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-03,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,120,96,9,4.7,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-04,Veg Thali,Lunch,Thursday,0,0,None,250,195,17,14.4,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-04,Chicken Biryani,Lunch,Thursday,0,0,None,270,227,19,8.6,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-04,Dal Makhani & Rice,Dinner,Thursday,0,0,None,200,157,19,7.3,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-04,Paneer Roll & Salad,Dinner,Thursday,0,0,None,145,112,14,6.2,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-04,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,120,98,7,4.9,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-05,Veg Thali,Lunch,Friday,0,0,None,250,192,22,11.1,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-05,Chicken Biryani,Lunch,Friday,0,0,None,440,346,42,17.9,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-05,Dal Makhani & Rice,Dinner,Friday,0,0,None,190,150,15,7.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-05,Paneer Roll & Salad,Dinner,Friday,0,0,None,165,135,9,7.4,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-05,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,135,101,11,7.7,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-06,Veg Thali,Lunch,Saturday,1,0,None,125,98,9,5.5,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-06,Chicken Biryani,Lunch,Saturday,1,0,None,190,146,20,8.4,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-06,Dal Makhani & Rice,Dinner,Saturday,1,0,None,125,94,14,5.4,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-06,Paneer Roll & Salad,Dinner,Saturday,1,0,None,105,79,12,4.6,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-06,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,85,70,5,3.3,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-07,Veg Thali,Lunch,Sunday,1,1,None,80,66,5,3.0,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-07,Chicken Biryani,Lunch,Sunday,1,1,None,110,88,7,4.9,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-07,Dal Makhani & Rice,Dinner,Sunday,1,1,None,70,53,7,3.3,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-07,Paneer Roll & Salad,Dinner,Sunday,1,1,None,60,44,7,2.9,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-07,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,40,30,3,2.4,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-08,Veg Thali,Lunch,Monday,0,0,None,250,198,16,11.6,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-08,Chicken Biryani,Lunch,Monday,0,0,None,315,260,21,12.9,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-08,Dal Makhani & Rice,Dinner,Monday,0,0,None,205,169,15,7.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-08,Paneer Roll & Salad,Dinner,Monday,0,0,None,175,140,14,7.4,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-08,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,130,102,8,7.3,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-09,Veg Thali,Lunch,Tuesday,0,0,None,220,182,15,8.1,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-09,Chicken Biryani,Lunch,Tuesday,0,0,None,300,252,19,9.2,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-09,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,195,151,16,10.5,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-09,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,165,137,10,5.6,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-09,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,150,117,13,6.8,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-10,Veg Thali,Lunch,Wednesday,0,0,None,200,162,12,9.7,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-10,Chicken Biryani,Lunch,Wednesday,0,0,None,300,245,20,12.5,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-10,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,205,159,21,9.1,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-10,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,140,113,12,5.2,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-10,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,125,102,7,5.6,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-11,Veg Thali,Lunch,Thursday,0,0,None,265,207,20,13.6,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-11,Chicken Biryani,Lunch,Thursday,0,0,None,305,249,20,12.9,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-11,Dal Makhani & Rice,Dinner,Thursday,0,0,None,205,162,17,8.0,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-11,Paneer Roll & Salad,Dinner,Thursday,0,0,None,155,124,10,6.7,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-11,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,130,99,13,6.5,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-12,Veg Thali,Lunch,Friday,0,0,None,230,185,18,9.2,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-12,Chicken Biryani,Lunch,Friday,0,0,None,400,328,21,17.9,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-12,Dal Makhani & Rice,Dinner,Friday,0,0,None,170,140,14,6.0,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-12,Paneer Roll & Salad,Dinner,Friday,0,0,None,140,118,10,4.0,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-12,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,140,106,16,6.6,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-13,Veg Thali,Lunch,Saturday,1,0,None,140,109,11,6.3,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-13,Chicken Biryani,Lunch,Saturday,1,0,None,175,137,18,7.1,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-13,Dal Makhani & Rice,Dinner,Saturday,1,0,None,115,91,11,4.0,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-13,Paneer Roll & Salad,Dinner,Saturday,1,0,None,100,79,9,4.3,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-13,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,90,71,6,4.7,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-14,Veg Thali,Lunch,Sunday,1,1,None,90,70,9,4.1,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-14,Chicken Biryani,Lunch,Sunday,1,1,None,115,89,11,5.3,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-14,Dal Makhani & Rice,Dinner,Sunday,1,1,None,90,70,9,3.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-14,Paneer Roll & Salad,Dinner,Sunday,1,1,None,50,40,3,2.4,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-14,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,45,35,3,2.4,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-15,Veg Thali,Lunch,Monday,0,0,Monsoon Heavy Rain,160,133,10,6.1,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-15,Chicken Biryani,Lunch,Monday,0,0,Monsoon Heavy Rain,245,201,18,8.0,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-15,Dal Makhani & Rice,Dinner,Monday,0,0,Monsoon Heavy Rain,145,116,12,6.1,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-15,Paneer Roll & Salad,Dinner,Monday,0,0,Monsoon Heavy Rain,115,88,10,5.5,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-15,Pasta Alfredo & Bread,Dinner,Monday,0,0,Monsoon Heavy Rain,90,73,5,3.6,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-16,Veg Thali,Lunch,Tuesday,0,1,Tech Symposium,205,157,22,9.2,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-16,Chicken Biryani,Lunch,Tuesday,0,1,Tech Symposium,215,177,13,8.6,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-16,Dal Makhani & Rice,Dinner,Tuesday,0,1,Tech Symposium,155,119,15,6.8,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-16,Paneer Roll & Salad,Dinner,Tuesday,0,1,Tech Symposium,145,115,10,6.6,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-16,Pasta Alfredo & Bread,Dinner,Tuesday,0,1,Tech Symposium,115,88,8,5.9,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-17,Veg Thali,Lunch,Wednesday,0,0,None,235,186,15,11.5,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-17,Chicken Biryani,Lunch,Wednesday,0,0,None,320,255,21,14.7,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-17,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,215,170,13,10.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-17,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,135,106,11,6.6,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-17,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,110,92,7,3.3,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-18,Veg Thali,Lunch,Thursday,0,0,None,235,187,23,8.7,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-18,Chicken Biryani,Lunch,Thursday,0,0,None,335,270,26,14.6,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-18,Dal Makhani & Rice,Dinner,Thursday,0,0,None,170,135,17,6.7,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-18,Paneer Roll & Salad,Dinner,Thursday,0,0,None,150,123,9,6.6,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-18,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,115,95,9,3.5,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-19,Veg Thali,Lunch,Friday,0,0,None,235,185,23,9.7,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-19,Chicken Biryani,Lunch,Friday,0,0,None,380,295,30,17.3,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-19,Dal Makhani & Rice,Dinner,Friday,0,0,None,210,159,19,10.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-19,Paneer Roll & Salad,Dinner,Friday,0,0,None,165,126,14,9.4,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-19,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,125,98,12,4.6,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-20,Veg Thali,Lunch,Saturday,1,0,None,165,127,15,8.4,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-20,Chicken Biryani,Lunch,Saturday,1,0,None,205,165,12,10.4,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-20,Dal Makhani & Rice,Dinner,Saturday,1,0,None,115,95,7,4.9,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-20,Paneer Roll & Salad,Dinner,Saturday,1,0,None,100,79,8,4.2,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-20,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,85,68,7,3.6,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-21,Veg Thali,Lunch,Sunday,1,1,None,85,68,6,3.4,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-21,Chicken Biryani,Lunch,Sunday,1,1,None,115,90,9,5.9,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-21,Dal Makhani & Rice,Dinner,Sunday,1,1,None,60,50,4,2.1,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-21,Paneer Roll & Salad,Dinner,Sunday,1,1,None,55,42,4,3.2,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-21,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,45,34,5,2.0,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-22,Veg Thali,Lunch,Monday,0,0,None,250,202,22,9.8,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-22,Chicken Biryani,Lunch,Monday,0,0,None,320,249,29,14.0,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-22,Dal Makhani & Rice,Dinner,Monday,0,0,None,210,162,15,11.2,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-22,Paneer Roll & Salad,Dinner,Monday,0,0,None,160,132,9,5.9,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-22,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,135,107,12,5.5,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-23,Veg Thali,Lunch,Tuesday,0,0,None,240,196,20,7.6,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-23,Chicken Biryani,Lunch,Tuesday,0,0,None,355,272,25,21.9,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-23,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,200,168,13,7.2,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-23,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,165,132,14,6.8,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-23,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,165,129,17,5.8,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-24,Veg Thali,Lunch,Wednesday,0,0,None,210,169,20,7.8,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-24,Chicken Biryani,Lunch,Wednesday,0,0,None,345,282,21,14.2,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-24,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,175,140,14,6.4,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-24,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,150,123,12,5.3,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-24,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,140,115,12,4.8,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-25,Veg Thali,Lunch,Thursday,0,0,None,210,161,23,7.9,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-25,Chicken Biryani,Lunch,Thursday,0,0,None,330,275,20,12.8,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-25,Dal Makhani & Rice,Dinner,Thursday,0,0,None,170,129,19,8.1,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-25,Paneer Roll & Salad,Dinner,Thursday,0,0,None,165,133,12,6.4,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-25,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,130,100,14,5.9,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-26,Veg Thali,Lunch,Friday,0,0,None,220,181,15,7.4,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-26,Chicken Biryani,Lunch,Friday,0,0,None,385,315,30,14.0,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-26,Dal Makhani & Rice,Dinner,Friday,0,0,None,195,156,12,9.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-26,Paneer Roll & Salad,Dinner,Friday,0,0,None,170,135,16,6.5,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-26,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,130,101,13,5.3,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-27,Veg Thali,Lunch,Saturday,1,0,None,160,123,12,7.8,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-27,Chicken Biryani,Lunch,Saturday,1,0,None,205,173,11,7.3,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-27,Dal Makhani & Rice,Dinner,Saturday,1,0,None,115,88,9,6.1,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-27,Paneer Roll & Salad,Dinner,Saturday,1,0,None,85,65,7,4.5,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-27,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,70,56,6,2.7,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-28,Veg Thali,Lunch,Sunday,1,1,None,80,64,6,3.2,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-28,Chicken Biryani,Lunch,Sunday,1,1,None,110,88,8,5.2,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-28,Dal Makhani & Rice,Dinner,Sunday,1,1,None,65,50,6,2.8,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-28,Paneer Roll & Salad,Dinner,Sunday,1,1,None,50,41,2,2.2,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-28,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,45,33,4,2.6,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-29,Veg Thali,Lunch,Monday,0,0,None,275,229,21,8.8,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-29,Chicken Biryani,Lunch,Monday,0,0,None,320,265,26,10.8,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-29,Dal Makhani & Rice,Dinner,Monday,0,0,None,210,164,20,8.2,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-29,Paneer Roll & Salad,Dinner,Monday,0,0,None,160,130,11,6.4,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-29,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,120,97,10,3.9,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-30,Veg Thali,Lunch,Tuesday,0,0,None,270,220,22,10.4,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-30,Chicken Biryani,Lunch,Tuesday,0,0,None,395,329,25,14.0,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-30,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,220,180,14,8.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-30,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,150,125,11,4.9,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-06-30,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,130,100,13,5.8,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-01,Veg Thali,Lunch,Wednesday,0,0,None,230,181,22,9.0,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-01,Chicken Biryani,Lunch,Wednesday,0,0,None,270,223,16,10.2,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-01,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,200,161,19,7.0,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-01,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,170,138,10,6.9,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-01,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,115,95,7,4.1,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-02,Veg Thali,Lunch,Thursday,0,0,None,225,173,16,12.3,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-02,Chicken Biryani,Lunch,Thursday,0,0,None,295,245,18,12.1,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-02,Dal Makhani & Rice,Dinner,Thursday,0,0,None,195,149,21,8.0,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-02,Paneer Roll & Salad,Dinner,Thursday,0,0,None,165,125,16,8.3,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-02,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,115,92,10,4.1,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-03,Veg Thali,Lunch,Friday,0,0,None,210,169,14,8.3,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-03,Chicken Biryani,Lunch,Friday,0,0,None,335,267,24,15.2,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-03,Dal Makhani & Rice,Dinner,Friday,0,0,None,190,149,12,9.5,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-03,Paneer Roll & Salad,Dinner,Friday,0,0,None,130,108,6,6.1,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-03,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,135,108,11,5.8,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-04,Veg Thali,Lunch,Saturday,1,0,None,145,112,13,6.7,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-04,Chicken Biryani,Lunch,Saturday,1,0,None,210,163,23,7.4,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-04,Dal Makhani & Rice,Dinner,Saturday,1,0,None,125,96,14,4.7,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-04,Paneer Roll & Salad,Dinner,Saturday,1,0,None,100,79,9,3.7,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-04,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,85,64,7,4.4,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-05,Veg Thali,Lunch,Sunday,1,1,None,85,66,7,3.9,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-05,Chicken Biryani,Lunch,Sunday,1,1,None,110,83,10,6.2,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-05,Dal Makhani & Rice,Dinner,Sunday,1,1,None,60,45,5,3.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-05,Paneer Roll & Salad,Dinner,Sunday,1,1,None,50,39,3,3.0,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-05,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,50,38,5,2.2,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-06,Veg Thali,Lunch,Monday,0,0,Tech Symposium,285,220,27,12.4,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-06,Chicken Biryani,Lunch,Monday,0,0,Tech Symposium,460,366,38,20.8,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-06,Dal Makhani & Rice,Dinner,Monday,0,0,Tech Symposium,275,215,19,13.3,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-06,Paneer Roll & Salad,Dinner,Monday,0,0,Tech Symposium,225,190,14,7.6,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-06,Pasta Alfredo & Bread,Dinner,Monday,0,0,Tech Symposium,180,138,15,9.9,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-07,Veg Thali,Lunch,Tuesday,0,0,Monsoon Heavy Rain,175,136,12,8.6,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-07,Chicken Biryani,Lunch,Tuesday,0,0,Monsoon Heavy Rain,220,170,22,9.8,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-07,Dal Makhani & Rice,Dinner,Tuesday,0,0,Monsoon Heavy Rain,145,119,9,5.3,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-07,Paneer Roll & Salad,Dinner,Tuesday,0,0,Monsoon Heavy Rain,140,106,14,6.6,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-07,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,Monsoon Heavy Rain,100,81,7,4.1,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-08,Veg Thali,Lunch,Wednesday,0,0,None,225,179,13,12.2,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-08,Chicken Biryani,Lunch,Wednesday,0,0,None,310,242,32,12.8,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-08,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,195,159,14,7.7,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-08,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,175,135,19,7.1,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-08,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,115,96,9,3.7,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-09,Veg Thali,Lunch,Thursday,0,0,None,230,181,18,9.4,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-09,Chicken Biryani,Lunch,Thursday,0,0,None,320,261,27,9.6,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-09,Dal Makhani & Rice,Dinner,Thursday,0,0,None,175,138,17,6.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-09,Paneer Roll & Salad,Dinner,Thursday,0,0,None,130,104,11,5.0,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-09,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,120,98,7,5.1,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-10,Veg Thali,Lunch,Friday,0,0,None,195,158,17,6.6,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-10,Chicken Biryani,Lunch,Friday,0,0,None,425,358,28,12.3,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-10,Dal Makhani & Rice,Dinner,Friday,0,0,None,215,164,16,11.7,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-10,Paneer Roll & Salad,Dinner,Friday,0,0,None,175,145,13,5.4,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-10,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,130,100,10,6.3,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-11,Veg Thali,Lunch,Saturday,1,0,None,150,117,10,8.3,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-11,Chicken Biryani,Lunch,Saturday,1,0,None,185,149,14,7.4,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-11,Dal Makhani & Rice,Dinner,Saturday,1,0,None,130,107,7,5.9,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-11,Paneer Roll & Salad,Dinner,Saturday,1,0,None,85,65,7,4.2,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-11,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,70,59,3,2.9,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-12,Veg Thali,Lunch,Sunday,1,1,None,95,73,6,5.1,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-12,Chicken Biryani,Lunch,Sunday,1,1,None,110,91,6,4.7,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-12,Dal Makhani & Rice,Dinner,Sunday,1,1,None,60,49,4,2.2,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-12,Paneer Roll & Salad,Dinner,Sunday,1,1,None,55,42,6,2.6,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-12,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,45,35,4,1.9,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-13,Veg Thali,Lunch,Monday,0,0,None,245,207,12,8.2,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-13,Chicken Biryani,Lunch,Monday,0,0,None,305,257,16,11.1,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-13,Dal Makhani & Rice,Dinner,Monday,0,0,None,230,177,19,10.9,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-13,Paneer Roll & Salad,Dinner,Monday,0,0,None,160,130,12,5.8,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-13,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,125,99,10,5.2,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-14,Veg Thali,Lunch,Tuesday,0,0,None,295,226,31,11.8,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-14,Chicken Biryani,Lunch,Tuesday,0,0,None,340,263,35,14.0,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-14,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,215,180,12,7.9,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-14,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,145,118,12,5.7,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-14,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,150,117,11,7.1,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-15,Veg Thali,Lunch,Wednesday,0,0,None,225,183,17,8.8,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-15,Chicken Biryani,Lunch,Wednesday,0,0,None,285,221,21,12.9,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-15,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,195,153,18,7.5,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-15,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,170,129,15,8.6,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-15,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,115,95,8,3.7,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-16,Veg Thali,Lunch,Thursday,0,1,None,125,99,9,5.6,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-16,Chicken Biryani,Lunch,Thursday,0,1,None,155,122,11,7.6,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-16,Dal Makhani & Rice,Dinner,Thursday,0,1,None,95,74,9,4.5,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-16,Paneer Roll & Salad,Dinner,Thursday,0,1,None,75,61,4,3.5,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-16,Pasta Alfredo & Bread,Dinner,Thursday,0,1,None,70,58,4,2.8,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-17,Veg Thali,Lunch,Friday,0,0,None,235,197,11,9.7,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-17,Chicken Biryani,Lunch,Friday,0,0,None,365,294,31,13.4,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-17,Dal Makhani & Rice,Dinner,Friday,0,0,None,205,158,20,8.7,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-17,Paneer Roll & Salad,Dinner,Friday,0,0,None,145,115,11,5.8,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-17,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,120,99,8,4.8,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-18,Veg Thali,Lunch,Saturday,1,0,None,160,123,17,7.1,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-18,Chicken Biryani,Lunch,Saturday,1,0,None,205,166,15,7.6,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-18,Dal Makhani & Rice,Dinner,Saturday,1,0,None,135,101,16,5.5,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-18,Paneer Roll & Salad,Dinner,Saturday,1,0,None,100,81,7,4.5,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-18,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,80,66,6,2.6,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-19,Veg Thali,Lunch,Sunday,1,1,None,85,64,9,3.9,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-19,Chicken Biryani,Lunch,Sunday,1,1,None,120,90,9,7.3,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-19,Dal Makhani & Rice,Dinner,Sunday,1,1,None,65,52,5,2.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-19,Paneer Roll & Salad,Dinner,Sunday,1,1,None,55,42,4,2.9,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-19,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,50,40,4,2.2,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-20,Veg Thali,Lunch,Monday,0,0,None,255,201,18,10.9,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-20,Chicken Biryani,Lunch,Monday,0,0,None,345,266,36,16.3,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-20,Dal Makhani & Rice,Dinner,Monday,0,0,None,220,179,18,7.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-20,Paneer Roll & Salad,Dinner,Monday,0,0,None,205,156,24,9.0,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-20,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,135,107,10,6.5,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-21,Veg Thali,Lunch,Tuesday,0,0,None,235,191,15,9.4,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-21,Chicken Biryani,Lunch,Tuesday,0,0,None,315,258,17,12.1,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-21,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,205,165,17,7.3,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-21,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,175,134,18,7.1,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-21,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,155,119,14,7.7,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-22,Veg Thali,Lunch,Wednesday,0,0,None,215,177,18,6.4,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-22,Chicken Biryani,Lunch,Wednesday,0,0,None,305,243,24,12.1,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-22,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,190,156,11,7.2,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-22,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,140,114,12,5.2,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-22,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,145,110,17,5.7,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-23,Veg Thali,Lunch,Thursday,0,0,Midterm Exams,215,170,14,11.3,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-23,Chicken Biryani,Lunch,Thursday,0,0,Midterm Exams,240,195,15,10.3,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-23,Dal Makhani & Rice,Dinner,Thursday,0,0,Midterm Exams,175,143,15,5.5,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-23,Paneer Roll & Salad,Dinner,Thursday,0,0,Midterm Exams,140,117,10,4.9,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-23,Pasta Alfredo & Bread,Dinner,Thursday,0,0,Midterm Exams,110,87,9,4.3,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-24,Veg Thali,Lunch,Friday,0,0,None,230,185,16,9.3,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-24,Chicken Biryani,Lunch,Friday,0,0,None,375,311,22,14.9,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-24,Dal Makhani & Rice,Dinner,Friday,0,0,None,205,172,15,6.1,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-24,Paneer Roll & Salad,Dinner,Friday,0,0,None,185,144,15,9.2,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-24,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,120,96,8,5.9,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-25,Veg Thali,Lunch,Saturday,1,0,None,160,123,17,7.1,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-25,Chicken Biryani,Lunch,Saturday,1,0,None,220,170,21,10.3,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-25,Dal Makhani & Rice,Dinner,Saturday,1,0,None,130,108,10,4.4,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-25,Paneer Roll & Salad,Dinner,Saturday,1,0,None,100,82,8,3.1,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-25,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,90,71,8,4.0,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-26,Veg Thali,Lunch,Sunday,1,1,None,75,60,4,3.6,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-26,Chicken Biryani,Lunch,Sunday,1,1,None,110,87,8,5.3,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-26,Dal Makhani & Rice,Dinner,Sunday,1,1,None,70,54,7,2.8,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-26,Paneer Roll & Salad,Dinner,Sunday,1,1,None,60,44,5,3.9,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-26,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,55,40,4,4.1,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-27,Veg Thali,Lunch,Monday,0,0,None,235,191,19,7.6,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-27,Chicken Biryani,Lunch,Monday,0,0,None,335,268,24,15.0,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-27,Dal Makhani & Rice,Dinner,Monday,0,0,None,205,158,14,10.0,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-27,Paneer Roll & Salad,Dinner,Monday,0,0,None,170,136,13,7.6,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-27,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,130,105,12,4.3,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-28,Veg Thali,Lunch,Tuesday,0,0,None,285,228,18,14.2,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-28,Chicken Biryani,Lunch,Tuesday,0,0,None,290,242,20,9.9,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-28,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,215,174,20,6.6,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-28,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,175,139,15,7.0,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-28,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,135,109,12,4.7,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-29,Veg Thali,Lunch,Wednesday,0,0,None,215,177,11,9.5,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-29,Chicken Biryani,Lunch,Wednesday,0,0,None,305,247,27,10.5,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-29,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,200,154,21,9.0,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-29,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,160,124,11,7.6,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-29,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,135,102,13,6.2,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-30,Veg Thali,Lunch,Thursday,0,0,None,230,190,17,7.7,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-30,Chicken Biryani,Lunch,Thursday,0,0,None,285,239,19,8.7,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-30,Dal Makhani & Rice,Dinner,Thursday,0,0,None,170,133,13,8.1,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-30,Paneer Roll & Salad,Dinner,Thursday,0,0,None,150,116,12,7.8,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-30,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,105,81,10,4.2,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-31,Veg Thali,Lunch,Friday,0,0,None,205,166,19,6.2,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-31,Chicken Biryani,Lunch,Friday,0,0,None,390,311,33,16.4,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-31,Dal Makhani & Rice,Dinner,Friday,0,0,None,180,147,13,6.1,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-31,Paneer Roll & Salad,Dinner,Friday,0,0,None,150,120,9,6.4,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-07-31,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,115,92,10,4.7,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-01,Veg Thali,Lunch,Saturday,1,0,None,140,114,8,5.6,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-01,Chicken Biryani,Lunch,Saturday,1,0,None,205,173,15,5.2,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-01,Dal Makhani & Rice,Dinner,Saturday,1,0,None,135,105,13,6.3,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-01,Paneer Roll & Salad,Dinner,Saturday,1,0,None,105,84,9,3.7,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-01,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,90,68,9,4.7,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-02,Veg Thali,Lunch,Sunday,1,1,None,95,75,8,3.7,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-02,Chicken Biryani,Lunch,Sunday,1,1,None,100,81,6,4.1,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-02,Dal Makhani & Rice,Dinner,Sunday,1,1,None,70,52,6,3.8,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-02,Paneer Roll & Salad,Dinner,Sunday,1,1,None,60,44,6,3.4,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-02,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,50,41,4,1.9,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-03,Veg Thali,Lunch,Monday,0,0,None,260,205,18,13.1,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-03,Chicken Biryani,Lunch,Monday,0,0,None,335,259,33,15.5,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-03,Dal Makhani & Rice,Dinner,Monday,0,0,None,180,143,13,7.9,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-03,Paneer Roll & Salad,Dinner,Monday,0,0,None,170,134,16,6.8,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-03,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,155,119,17,6.3,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-04,Veg Thali,Lunch,Tuesday,0,0,None,270,208,21,14.3,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-04,Chicken Biryani,Lunch,Tuesday,0,0,None,295,231,28,11.2,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-04,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,210,172,13,9.4,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-04,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,165,135,14,5.4,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-04,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,145,115,12,5.9,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-05,Veg Thali,Lunch,Wednesday,0,0,None,220,175,14,10.3,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-05,Chicken Biryani,Lunch,Wednesday,0,0,None,275,215,19,15.5,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-05,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,205,164,14,8.3,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-05,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,150,121,13,5.4,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-05,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,110,90,8,4.3,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-06,Veg Thali,Lunch,Thursday,0,0,None,210,175,15,7.1,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-06,Chicken Biryani,Lunch,Thursday,0,0,None,290,233,26,11.3,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-06,Dal Makhani & Rice,Dinner,Thursday,0,0,None,200,162,12,8.4,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-06,Paneer Roll & Salad,Dinner,Thursday,0,0,None,145,122,9,5.2,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-06,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,130,106,9,4.5,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-07,Veg Thali,Lunch,Friday,0,0,None,215,179,17,7.2,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-07,Chicken Biryani,Lunch,Friday,0,0,None,415,335,32,16.3,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-07,Dal Makhani & Rice,Dinner,Friday,0,0,None,195,154,13,8.5,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-07,Paneer Roll & Salad,Dinner,Friday,0,0,None,160,131,12,6.4,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-07,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,110,92,7,3.7,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-08,Veg Thali,Lunch,Saturday,1,0,None,150,115,16,7.1,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-08,Chicken Biryani,Lunch,Saturday,1,0,None,205,159,18,9.8,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-08,Dal Makhani & Rice,Dinner,Saturday,1,0,None,120,99,10,3.9,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-08,Paneer Roll & Salad,Dinner,Saturday,1,0,None,110,85,8,6.0,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-08,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,90,73,7,3.8,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-09,Veg Thali,Lunch,Sunday,1,1,None,70,58,5,2.3,50.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-09,Chicken Biryani,Lunch,Sunday,1,1,None,110,88,9,4.8,90.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-09,Dal Makhani & Rice,Dinner,Sunday,1,1,None,70,55,5,3.5,45.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-09,Paneer Roll & Salad,Dinner,Sunday,1,1,None,60,45,5,3.7,65.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-09,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,50,38,4,2.4,75.0,[Synthetic Sample] Pre-optimization baseline: Fixed kitchen estimation
+2026-08-10,Veg Thali,Lunch,Monday,0,0,Annual Sports Meet,275,253,9,4.3,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-10,Chicken Biryani,Lunch,Monday,0,0,Annual Sports Meet,360,327,11,7.3,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-10,Dal Makhani & Rice,Dinner,Monday,0,0,Annual Sports Meet,290,261,11,5.9,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-10,Paneer Roll & Salad,Dinner,Monday,0,0,Annual Sports Meet,225,200,10,5.1,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-10,Pasta Alfredo & Bread,Dinner,Monday,0,0,Annual Sports Meet,150,137,5,2.8,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-11,Veg Thali,Lunch,Tuesday,0,0,Annual Sports Meet,270,241,13,5.7,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-11,Chicken Biryani,Lunch,Tuesday,0,0,Annual Sports Meet,425,392,16,5.2,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-11,Dal Makhani & Rice,Dinner,Tuesday,0,0,Annual Sports Meet,265,236,10,5.9,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-11,Paneer Roll & Salad,Dinner,Tuesday,0,0,Annual Sports Meet,175,160,5,3.6,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-11,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,Annual Sports Meet,170,153,6,3.8,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-12,Veg Thali,Lunch,Wednesday,0,0,None,185,166,6,4.1,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-12,Chicken Biryani,Lunch,Wednesday,0,0,None,285,258,9,6.2,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-12,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,160,143,5,4.5,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-12,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,135,123,5,2.4,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-12,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,115,101,5,3.3,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-13,Veg Thali,Lunch,Thursday,0,0,None,195,174,7,4.4,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-13,Chicken Biryani,Lunch,Thursday,0,0,None,240,213,12,4.9,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-13,Dal Makhani & Rice,Dinner,Thursday,0,0,None,185,171,6,2.6,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-13,Paneer Roll & Salad,Dinner,Thursday,0,0,None,130,117,4,3.1,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-13,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,120,110,4,1.9,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-14,Veg Thali,Lunch,Friday,0,0,None,205,189,5,3.3,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-14,Chicken Biryani,Lunch,Friday,0,0,None,355,322,13,6.9,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-14,Dal Makhani & Rice,Dinner,Friday,0,0,None,160,143,6,4.2,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-14,Paneer Roll & Salad,Dinner,Friday,0,0,None,115,107,3,1.7,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-14,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,125,113,5,2.2,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-15,Veg Thali,Lunch,Saturday,1,1,None,70,62,3,1.7,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-15,Chicken Biryani,Lunch,Saturday,1,1,None,90,83,3,1.3,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-15,Dal Makhani & Rice,Dinner,Saturday,1,1,None,60,53,2,1.6,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-15,Paneer Roll & Salad,Dinner,Saturday,1,1,None,50,43,3,1.3,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-15,Pasta Alfredo & Bread,Dinner,Saturday,1,1,None,40,34,2,1.4,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-16,Veg Thali,Lunch,Sunday,1,1,None,60,54,2,1.5,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-16,Chicken Biryani,Lunch,Sunday,1,1,None,100,88,4,2.9,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-16,Dal Makhani & Rice,Dinner,Sunday,1,1,None,60,51,4,1.6,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-16,Paneer Roll & Salad,Dinner,Sunday,1,1,None,50,43,2,1.7,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-16,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,40,35,1,1.4,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-17,Veg Thali,Lunch,Monday,0,0,None,205,184,10,3.5,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-17,Chicken Biryani,Lunch,Monday,0,0,None,270,241,14,5.1,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-17,Dal Makhani & Rice,Dinner,Monday,0,0,None,180,161,7,4.2,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-17,Paneer Roll & Salad,Dinner,Monday,0,0,None,145,134,5,2.2,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-17,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,120,107,3,3.2,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-18,Veg Thali,Lunch,Tuesday,0,0,None,200,186,6,2.8,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-18,Chicken Biryani,Lunch,Tuesday,0,0,None,255,236,7,4.0,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-18,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,190,170,7,4.9,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-18,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,180,158,7,5.6,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-18,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,125,111,6,3.0,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-19,Veg Thali,Lunch,Wednesday,0,0,None,200,179,9,3.9,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-19,Chicken Biryani,Lunch,Wednesday,0,0,None,255,237,7,3.6,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-19,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,160,141,8,4.0,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-19,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,135,120,6,2.8,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-19,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,120,107,4,2.8,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-20,Veg Thali,Lunch,Thursday,0,0,None,185,171,4,3.8,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-20,Chicken Biryani,Lunch,Thursday,0,0,None,260,236,11,4.3,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-20,Dal Makhani & Rice,Dinner,Thursday,0,0,None,165,151,4,3.5,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-20,Paneer Roll & Salad,Dinner,Thursday,0,0,None,110,101,3,2.1,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-20,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,105,98,3,1.2,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-21,Veg Thali,Lunch,Friday,0,0,None,225,201,11,4.1,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-21,Chicken Biryani,Lunch,Friday,0,0,None,330,297,10,7.8,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-21,Dal Makhani & Rice,Dinner,Friday,0,0,None,165,146,8,3.8,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-21,Paneer Roll & Salad,Dinner,Friday,0,0,None,145,129,6,3.1,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-21,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,100,88,4,2.5,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-22,Veg Thali,Lunch,Saturday,1,0,None,120,106,6,2.9,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-22,Chicken Biryani,Lunch,Saturday,1,0,None,145,134,4,2.4,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-22,Dal Makhani & Rice,Dinner,Saturday,1,0,None,105,93,4,2.4,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-22,Paneer Roll & Salad,Dinner,Saturday,1,0,None,90,80,4,2.2,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-22,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,70,65,2,1.0,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-23,Veg Thali,Lunch,Sunday,1,1,None,75,67,2,2.0,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-23,Chicken Biryani,Lunch,Sunday,1,1,None,95,83,4,2.6,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-23,Dal Makhani & Rice,Dinner,Sunday,1,1,None,55,50,1,1.5,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-23,Paneer Roll & Salad,Dinner,Sunday,1,1,None,50,41,3,1.9,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-23,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,45,39,1,1.9,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-24,Veg Thali,Lunch,Monday,0,0,None,260,232,13,5.3,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-24,Chicken Biryani,Lunch,Monday,0,0,None,280,251,9,6.8,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-24,Dal Makhani & Rice,Dinner,Monday,0,0,None,190,171,8,3.3,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-24,Paneer Roll & Salad,Dinner,Monday,0,0,None,135,125,4,1.8,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-24,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,110,98,5,2.5,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-25,Veg Thali,Lunch,Tuesday,0,0,None,200,183,5,3.7,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-25,Chicken Biryani,Lunch,Tuesday,0,0,None,315,289,7,5.8,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-25,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,195,174,7,5.1,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-25,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,130,117,4,3.1,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-25,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,140,123,7,3.4,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-26,Veg Thali,Lunch,Wednesday,0,0,None,195,171,10,4.9,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-26,Chicken Biryani,Lunch,Wednesday,0,0,None,290,258,14,6.3,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-26,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,165,146,6,4.3,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-26,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,125,112,5,2.8,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-26,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,110,98,5,2.3,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-27,Veg Thali,Lunch,Thursday,0,0,None,200,176,11,4.8,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-27,Chicken Biryani,Lunch,Thursday,0,0,None,265,237,10,6.6,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-27,Dal Makhani & Rice,Dinner,Thursday,0,0,None,170,153,7,3.5,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-27,Paneer Roll & Salad,Dinner,Thursday,0,0,None,140,122,8,3.0,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-27,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,100,90,3,2.5,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-28,Veg Thali,Lunch,Friday,0,0,None,190,172,8,3.6,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-28,Chicken Biryani,Lunch,Friday,0,0,None,360,327,13,6.8,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-28,Dal Makhani & Rice,Dinner,Friday,0,0,None,175,157,8,3.5,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-28,Paneer Roll & Salad,Dinner,Friday,0,0,None,115,103,3,3.0,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-28,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,110,98,4,2.8,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-29,Veg Thali,Lunch,Saturday,1,0,None,125,109,6,3.2,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-29,Chicken Biryani,Lunch,Saturday,1,0,None,190,171,5,5.1,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-29,Dal Makhani & Rice,Dinner,Saturday,1,0,None,100,93,3,1.3,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-29,Paneer Roll & Salad,Dinner,Saturday,1,0,None,85,77,2,1.9,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-29,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,75,67,3,1.6,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-30,Veg Thali,Lunch,Sunday,1,1,None,85,73,5,2.3,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-30,Chicken Biryani,Lunch,Sunday,1,1,None,95,83,5,2.1,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-30,Dal Makhani & Rice,Dinner,Sunday,1,1,None,55,47,2,2.1,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-30,Paneer Roll & Salad,Dinner,Sunday,1,1,None,55,47,3,1.5,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-30,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,45,40,2,1.1,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-31,Veg Thali,Lunch,Monday,0,0,None,255,230,8,6.2,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-31,Chicken Biryani,Lunch,Monday,0,0,None,265,247,6,4.4,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-31,Dal Makhani & Rice,Dinner,Monday,0,0,None,185,165,9,3.8,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-31,Paneer Roll & Salad,Dinner,Monday,0,0,None,130,120,3,2.1,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-08-31,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,120,108,5,2.5,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-01,Veg Thali,Lunch,Tuesday,0,0,None,200,182,8,3.1,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-01,Chicken Biryani,Lunch,Tuesday,0,0,None,330,303,12,5.0,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-01,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,205,190,5,3.3,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-01,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,160,148,3,3.3,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-01,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,120,111,4,1.6,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-02,Veg Thali,Lunch,Wednesday,0,0,None,170,155,7,2.9,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-02,Chicken Biryani,Lunch,Wednesday,0,0,None,275,250,9,5.0,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-02,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,155,144,4,2.4,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-02,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,155,136,6,4.5,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-02,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,105,96,4,1.8,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-03,Veg Thali,Lunch,Thursday,0,0,None,195,179,5,4.1,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-03,Chicken Biryani,Lunch,Thursday,0,0,None,255,236,6,4.7,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-03,Dal Makhani & Rice,Dinner,Thursday,0,0,None,180,168,4,2.4,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-03,Paneer Roll & Salad,Dinner,Thursday,0,0,None,125,117,3,1.6,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-03,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,90,81,4,1.5,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-04,Veg Thali,Lunch,Friday,0,0,Annual Sports Meet,300,270,14,5.5,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-04,Chicken Biryani,Lunch,Friday,0,0,Annual Sports Meet,425,382,21,7.1,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-04,Dal Makhani & Rice,Dinner,Friday,0,0,Annual Sports Meet,225,201,8,5.5,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-04,Paneer Roll & Salad,Dinner,Friday,0,0,Annual Sports Meet,195,174,7,4.3,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-04,Pasta Alfredo & Bread,Dinner,Friday,0,0,Annual Sports Meet,150,140,3,2.2,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-05,Veg Thali,Lunch,Saturday,1,0,None,130,119,3,3.0,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-05,Chicken Biryani,Lunch,Saturday,1,0,None,190,170,6,5.0,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-05,Dal Makhani & Rice,Dinner,Saturday,1,0,None,100,91,3,1.9,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-05,Paneer Roll & Salad,Dinner,Saturday,1,0,None,90,79,5,2.1,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-05,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,60,53,2,1.5,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-06,Veg Thali,Lunch,Sunday,1,1,None,65,59,2,1.3,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-06,Chicken Biryani,Lunch,Sunday,1,1,None,90,81,3,2.2,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-06,Dal Makhani & Rice,Dinner,Sunday,1,1,None,55,50,1,1.5,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-06,Paneer Roll & Salad,Dinner,Sunday,1,1,None,50,42,3,1.5,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-06,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,35,31,1,1.1,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-07,Veg Thali,Lunch,Monday,0,0,None,210,195,6,3.3,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-07,Chicken Biryani,Lunch,Monday,0,0,None,360,331,13,6.0,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-07,Dal Makhani & Rice,Dinner,Monday,0,0,None,180,166,6,2.8,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-07,Paneer Roll & Salad,Dinner,Monday,0,0,None,130,117,5,2.7,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-07,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,120,111,3,2.2,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-08,Veg Thali,Lunch,Tuesday,0,0,None,230,212,8,3.7,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-08,Chicken Biryani,Lunch,Tuesday,0,0,None,280,257,11,4.2,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-08,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,175,160,5,3.5,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-08,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,150,132,6,4.5,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-08,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,135,122,5,2.5,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-09,Veg Thali,Lunch,Wednesday,0,0,None,190,177,3,3.4,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-09,Chicken Biryani,Lunch,Wednesday,0,0,None,285,259,11,5.6,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-09,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,165,152,6,2.6,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-09,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,130,117,5,2.6,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-09,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,125,111,5,3.1,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-10,Veg Thali,Lunch,Thursday,0,0,None,200,178,8,4.4,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-10,Chicken Biryani,Lunch,Thursday,0,0,None,275,256,6,4.0,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-10,Dal Makhani & Rice,Dinner,Thursday,0,0,None,170,157,5,2.9,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-10,Paneer Roll & Salad,Dinner,Thursday,0,0,None,145,132,6,2.4,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-10,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,130,112,7,3.4,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-11,Veg Thali,Lunch,Friday,0,0,None,180,163,5,3.8,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-11,Chicken Biryani,Lunch,Friday,0,0,None,385,342,14,10.6,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-11,Dal Makhani & Rice,Dinner,Friday,0,0,None,180,160,8,3.9,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-11,Paneer Roll & Salad,Dinner,Friday,0,0,None,115,107,2,1.9,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-11,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,120,104,7,3.3,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-12,Veg Thali,Lunch,Saturday,1,0,None,135,119,5,4.1,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-12,Chicken Biryani,Lunch,Saturday,1,0,None,175,164,4,2.4,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-12,Dal Makhani & Rice,Dinner,Saturday,1,0,None,125,112,5,2.6,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-12,Paneer Roll & Salad,Dinner,Saturday,1,0,None,85,75,4,1.9,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-12,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,75,65,3,2.6,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-13,Veg Thali,Lunch,Sunday,1,1,None,75,68,3,1.4,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-13,Chicken Biryani,Lunch,Sunday,1,1,None,100,90,4,1.9,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-13,Dal Makhani & Rice,Dinner,Sunday,1,1,None,60,55,1,1.2,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-13,Paneer Roll & Salad,Dinner,Sunday,1,1,None,55,49,2,1.4,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-13,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,40,33,2,1.9,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-14,Veg Thali,Lunch,Monday,0,1,None,115,100,6,3.1,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-14,Chicken Biryani,Lunch,Monday,0,1,None,160,144,4,4.2,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-14,Dal Makhani & Rice,Dinner,Monday,0,1,None,105,90,7,2.7,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-14,Paneer Roll & Salad,Dinner,Monday,0,1,None,75,67,3,1.8,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-14,Pasta Alfredo & Bread,Dinner,Monday,0,1,None,70,62,3,1.7,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-15,Veg Thali,Lunch,Tuesday,0,0,None,170,155,5,3.6,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-15,Chicken Biryani,Lunch,Tuesday,0,0,None,305,278,12,5.0,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-15,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,205,186,8,3.5,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-15,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,160,146,4,3.3,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-15,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,145,129,6,3.6,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-16,Veg Thali,Lunch,Wednesday,0,0,None,195,177,7,3.4,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-16,Chicken Biryani,Lunch,Wednesday,0,0,None,250,226,7,5.3,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-16,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,145,134,5,2.0,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-16,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,120,106,4,3.2,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-16,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,110,99,3,2.4,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-17,Veg Thali,Lunch,Thursday,0,0,None,200,176,9,5.1,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-17,Chicken Biryani,Lunch,Thursday,0,0,None,245,226,9,3.3,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-17,Dal Makhani & Rice,Dinner,Thursday,0,0,None,165,153,4,2.7,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-17,Paneer Roll & Salad,Dinner,Thursday,0,0,None,130,113,6,3.9,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-17,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,105,94,4,2.6,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-18,Veg Thali,Lunch,Friday,0,0,None,175,158,7,3.2,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-18,Chicken Biryani,Lunch,Friday,0,0,None,325,300,7,6.3,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-18,Dal Makhani & Rice,Dinner,Friday,0,0,None,170,152,5,4.3,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-18,Paneer Roll & Salad,Dinner,Friday,0,0,None,110,99,4,2.5,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-18,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,105,94,3,2.6,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-19,Veg Thali,Lunch,Saturday,1,0,Monsoon Heavy Rain,95,83,4,2.8,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-19,Chicken Biryani,Lunch,Saturday,1,0,Monsoon Heavy Rain,120,113,2,1.9,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-19,Dal Makhani & Rice,Dinner,Saturday,1,0,Monsoon Heavy Rain,85,73,3,3.3,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-19,Paneer Roll & Salad,Dinner,Saturday,1,0,Monsoon Heavy Rain,60,56,1,0.9,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-19,Pasta Alfredo & Bread,Dinner,Saturday,1,0,Monsoon Heavy Rain,50,45,1,1.4,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-20,Veg Thali,Lunch,Sunday,1,1,None,70,63,2,1.7,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-20,Chicken Biryani,Lunch,Sunday,1,1,None,105,94,5,2.1,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-20,Dal Makhani & Rice,Dinner,Sunday,1,1,None,55,50,2,1.0,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-20,Paneer Roll & Salad,Dinner,Sunday,1,1,None,50,46,1,1.1,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-20,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,40,34,2,1.3,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-21,Veg Thali,Lunch,Monday,0,0,None,230,211,7,4.3,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-21,Chicken Biryani,Lunch,Monday,0,0,None,250,227,8,4.7,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-21,Dal Makhani & Rice,Dinner,Monday,0,0,None,170,150,7,4.1,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-21,Paneer Roll & Salad,Dinner,Monday,0,0,None,140,130,4,2.1,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-21,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,115,105,3,2.5,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-22,Veg Thali,Lunch,Tuesday,0,0,None,215,195,7,4.1,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-22,Chicken Biryani,Lunch,Tuesday,0,0,None,290,263,8,6.4,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-22,Dal Makhani & Rice,Dinner,Tuesday,0,0,None,180,169,4,2.6,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-22,Paneer Roll & Salad,Dinner,Tuesday,0,0,None,135,127,3,1.6,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-22,Pasta Alfredo & Bread,Dinner,Tuesday,0,0,None,120,109,4,2.4,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-23,Veg Thali,Lunch,Wednesday,0,0,None,205,188,8,2.9,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-23,Chicken Biryani,Lunch,Wednesday,0,0,None,265,234,13,6.6,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-23,Dal Makhani & Rice,Dinner,Wednesday,0,0,None,165,149,5,3.8,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-23,Paneer Roll & Salad,Dinner,Wednesday,0,0,None,135,124,4,2.4,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-23,Pasta Alfredo & Bread,Dinner,Wednesday,0,0,None,115,105,3,2.2,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-24,Veg Thali,Lunch,Thursday,0,0,None,205,187,5,4.3,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-24,Chicken Biryani,Lunch,Thursday,0,0,None,225,202,7,5.4,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-24,Dal Makhani & Rice,Dinner,Thursday,0,0,None,175,159,6,3.3,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-24,Paneer Roll & Salad,Dinner,Thursday,0,0,None,145,131,4,3.3,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-24,Pasta Alfredo & Bread,Dinner,Thursday,0,0,None,125,116,3,2.1,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-25,Veg Thali,Lunch,Friday,0,0,None,205,184,9,3.7,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-25,Chicken Biryani,Lunch,Friday,0,0,None,360,324,11,9.1,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-25,Dal Makhani & Rice,Dinner,Friday,0,0,None,180,157,7,5.4,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-25,Paneer Roll & Salad,Dinner,Friday,0,0,None,130,116,5,3.3,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-25,Pasta Alfredo & Bread,Dinner,Friday,0,0,None,95,86,3,2.2,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-26,Veg Thali,Lunch,Saturday,1,0,None,140,129,4,2.4,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-26,Chicken Biryani,Lunch,Saturday,1,0,None,190,169,8,4.8,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-26,Dal Makhani & Rice,Dinner,Saturday,1,0,None,110,99,4,2.6,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-26,Paneer Roll & Salad,Dinner,Saturday,1,0,None,90,77,5,2.9,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-26,Pasta Alfredo & Bread,Dinner,Saturday,1,0,None,75,64,3,3.0,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-27,Veg Thali,Lunch,Sunday,1,1,None,75,67,3,1.5,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-27,Chicken Biryani,Lunch,Sunday,1,1,None,75,66,3,2.1,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-27,Dal Makhani & Rice,Dinner,Sunday,1,1,None,55,50,1,1.5,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-27,Paneer Roll & Salad,Dinner,Sunday,1,1,None,50,44,2,1.5,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-27,Pasta Alfredo & Bread,Dinner,Sunday,1,1,None,45,38,2,1.8,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-28,Veg Thali,Lunch,Monday,0,0,None,230,206,10,4.4,50.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-28,Chicken Biryani,Lunch,Monday,0,0,None,310,281,13,5.9,90.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-28,Dal Makhani & Rice,Dinner,Monday,0,0,None,195,175,6,4.7,45.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-28,Paneer Roll & Salad,Dinner,Monday,0,0,None,145,130,4,3.6,65.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer
+2026-09-28,Pasta Alfredo & Bread,Dinner,Monday,0,0,None,110,103,3,1.5,75.0,[Synthetic Sample] WasteWise AI guided preparation: Calibrated safety buffer

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlateWise_AI — Predict Food Waste Before It Happens</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <!-- Plotly.js for interactive visualizations -->
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand-section">
+      <div class="brand-logo">🌱</div>
+      <div>
+        <div class="brand-name">PlateWise_AI</div>
+        <div class="brand-badge">Environmental Hacks 2026</div>
+      </div>
+    </div>
+
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a class="nav-link active" data-view="dashboard">
+          <span class="nav-icon">📊</span>
+          <span class="nav-text">Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-view="entry">
+          <span class="nav-icon">📝</span>
+          <span class="nav-text">Daily Data Entry</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-view="prediction">
+          <span class="nav-icon">🔮</span>
+          <span class="nav-text">Demand Prediction</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-view="planner">
+          <span class="nav-icon">📋</span>
+          <span class="nav-text">Smart Prep Planner</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-view="advisor">
+          <span class="nav-icon">💡</span>
+          <span class="nav-text">AI Waste Advisor</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-view="analytics">
+          <span class="nav-icon">📈</span>
+          <span class="nav-text">Impact & Analytics</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-view="data">
+          <span class="nav-icon">🗂️</span>
+          <span class="nav-text">Data Management</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div>Backend: <strong>FastAPI + SQLite</strong></div>
+      <div style="margin-top: 4px;">ML: <strong>Random Forest Regressor</strong></div>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-wrapper">
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="top-title-area">
+        <h1 id="page-title">Executive Dashboard</h1>
+        <p id="page-subtitle">Real-time canteen meal demand & food waste metrics</p>
+      </div>
+      <div class="top-actions">
+        <span id="data-status-badge" class="badge badge-success">Live Records</span>
+        <button id="btn-seed-data" class="btn btn-outline btn-sm" title="Populate realistic synthetic data for hackathon testing">
+          ⚡ Load Sample Data
+        </button>
+        <button id="btn-clear-data" class="btn btn-outline btn-sm" title="Reset SQLite database">
+          🗑️ Clear
+        </button>
+      </div>
+    </header>
+
+    <div class="content-container">
+
+      <!-- ======================================================== -->
+      <!-- VIEW A: DASHBOARD -->
+      <!-- ======================================================== -->
+      <section id="view-dashboard" class="view-section active-view">
+        <!-- KPI Cards -->
+        <div class="grid-cols-4">
+          <div class="card stat-card stat-info">
+            <div class="stat-label">Total Meals Prepared</div>
+            <div class="stat-value" id="kpi-prepared">--</div>
+            <div class="stat-subtext">Cumulative kitchen cooking volume</div>
+          </div>
+          <div class="card stat-card stat-success">
+            <div class="stat-label">Total Meals Sold</div>
+            <div class="stat-value" id="kpi-sold">--</div>
+            <div class="stat-subtext">Consumed by canteen patrons</div>
+          </div>
+          <div class="card stat-card stat-warning">
+            <div class="stat-label">Unsold Portions</div>
+            <div class="stat-value" id="kpi-unsold">--</div>
+            <div class="stat-subtext" id="kpi-unsold-pct">Surplus portions</div>
+          </div>
+          <div class="card stat-card stat-danger">
+            <div class="stat-label">Measured Waste (kg)</div>
+            <div class="stat-value" id="kpi-discarded">--</div>
+            <div class="stat-subtext" id="kpi-waste-cost">Est. Cost: ₹0.00</div>
+          </div>
+        </div>
+
+        <!-- Next Day Operational Target Banner -->
+        <div class="card" style="margin-bottom: 24px; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-color: #86efac;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+            <div>
+              <span class="badge badge-success" style="margin-bottom: 8px;">Next Day Forecast Alert</span>
+              <h3 style="font-size: 18px; color: var(--primary-dark); margin-top: 4px;" id="banner-target-date">Target Date: Tomorrow</h3>
+              <p style="font-size: 13px; color: var(--text-secondary);">Predicted Patron Demand: <strong id="banner-pred-demand">-- meals</strong> | Recommended Preparation: <strong id="banner-rec-prep">-- meals</strong></p>
+            </div>
+            <div>
+              <button class="btn btn-primary" onclick="window.navigateTo('planner')">Plan Preparation Batch</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Grid -->
+        <div class="grid-cols-2">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Waste Trend Over Time (Prepared vs Sold vs Discarded)</h3>
+            </div>
+            <div id="chart-waste-trends" style="height: 340px;"></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Most Wasteful Menu Items (Recorded Discarded Food kg)</h3>
+            </div>
+            <div id="chart-wasteful-items" style="height: 340px;"></div>
+          </div>
+        </div>
+
+        <!-- Actual vs Predicted Demand Quick View -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Actual vs Predicted Demand (Recent Logs)</h3>
+            <button class="btn btn-outline btn-sm" onclick="window.navigateTo('prediction')">Inspect ML Performance</button>
+          </div>
+          <div id="chart-actual-vs-predicted" style="height: 300px;"></div>
+        </div>
+      </section>
+
+      <!-- ======================================================== -->
+      <!-- VIEW B: DAILY DATA ENTRY -->
+      <!-- ======================================================== -->
+      <section id="view-entry" class="view-section">
+        <div class="grid-cols-2">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Log Daily Meal & Waste Records</h3>
+              <span class="badge badge-info">Validation Active</span>
+            </div>
+            <form id="entry-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="entry-date">Date *</label>
+                  <input type="date" id="entry-date" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="entry-day-of-week">Day of Week (Auto)</label>
+                  <input type="text" id="entry-day-of-week" class="form-input" readonly placeholder="Auto-calculated">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="entry-menu-item">Menu Item *</label>
+                  <select id="entry-menu-item" class="form-select" required>
+                    <option value="">-- Select Item --</option>
+                    <option value="Veg Thali">Veg Thali</option>
+                    <option value="Chicken Biryani">Chicken Biryani</option>
+                    <option value="Dal Makhani & Rice">Dal Makhani & Rice</option>
+                    <option value="Paneer Roll & Salad">Paneer Roll & Salad</option>
+                    <option value="Pasta Alfredo & Bread">Pasta Alfredo & Bread</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="entry-meal-category">Meal Category</label>
+                  <select id="entry-meal-category" class="form-select">
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Snacks">Snacks</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="entry-prepared">Meals Prepared *</label>
+                  <input type="number" id="entry-prepared" class="form-input" min="0" placeholder="e.g. 200" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="entry-sold">Meals Sold / Served *</label>
+                  <input type="number" id="entry-sold" class="form-input" min="0" placeholder="e.g. 185" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="entry-leftover">Edible Leftover Meals</label>
+                  <input type="number" id="entry-leftover" class="form-input" min="0" placeholder="e.g. 10">
+                  <div class="form-help">Portions safe for staff or cooling</div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="entry-discarded-kg">Food Discarded (kg)</label>
+                  <input type="number" step="0.1" id="entry-discarded-kg" class="form-input" min="0" placeholder="e.g. 4.5">
+                  <div class="form-help">Measured physical bin waste</div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="entry-cost">Cost Per Meal (₹)</label>
+                  <input type="number" step="1" id="entry-cost" class="form-input" value="50.0" min="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="entry-special-event">Special Event</label>
+                  <select id="entry-special-event" class="form-select">
+                    <option value="None">None (Normal Day)</option>
+                    <option value="Tech Symposium">Tech Symposium</option>
+                    <option value="Annual Sports Meet">Annual Sports Meet</option>
+                    <option value="Midterm Exams">Midterm Exams</option>
+                    <option value="Semester Finals">Semester Finals</option>
+                    <option value="Cultural Fest">Cultural Fest</option>
+                    <option value="Monsoon Heavy Rain">Monsoon Heavy Rain</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group" style="display: flex; align-items: center; gap: 8px; margin-top: 10px;">
+                  <input type="checkbox" id="entry-is-holiday" style="width: 18px; height: 18px;">
+                  <label for="entry-is-holiday" style="font-size: 13px; font-weight: 600;">Campus Holiday / Vacation Day</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="entry-notes">Operational Notes</label>
+                <textarea id="entry-notes" class="form-textarea" rows="2" placeholder="e.g. Rainy afternoon, commuter students left early."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                💾 Save Record to Database
+              </button>
+            </form>
+          </div>
+
+          <!-- Quick Guide & Today's Entries -->
+          <div>
+            <div class="card" style="margin-bottom: 24px;">
+              <div class="card-header">
+                <h3 class="card-title">Validation & Measurement Guidelines</h3>
+              </div>
+              <ul style="font-size: 13px; color: var(--text-secondary); line-height: 1.8; padding-left: 20px;">
+                <li><strong>Unsold Meals ≠ Discarded Waste:</strong> Some leftovers remain edible and safe to repurpose for staff lunch or donation.</li>
+                <li><strong>Sold cannot exceed Prepared:</strong> The system strictly rejects impossible figures where consumption exceeds cooking volume.</li>
+                <li><strong>Consistent Weighing:</strong> Record discarded food using calibrated canteen scales before disposal.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Recent Submissions</h3>
+              </div>
+              <div class="table-responsive">
+                <table class="data-table" id="table-recent-entries">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Menu Item</th>
+                      <th>Prep</th>
+                      <th>Sold</th>
+                      <th>Discarded kg</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td colspan="5" style="text-align: center; color: var(--text-muted);">No records yet</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================== -->
+      <!-- VIEW C: DEMAND PREDICTION -->
+      <!-- ======================================================== -->
+      <section id="view-prediction" class="view-section">
+        <!-- Model Status Card -->
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Machine Learning Model Validation Metrics</h3>
+              <p style="font-size: 13px; color: var(--text-muted);">Evaluated strictly on held-out chronological test data (no target leakage)</p>
+            </div>
+            <button id="btn-retrain-ml" class="btn btn-primary btn-sm">⚡ Retrain Random Forest Model</button>
+          </div>
+          
+          <div class="grid-cols-4" style="margin-bottom: 0;">
+            <div style="background: var(--mint-subtle); padding: 14px; border-radius: var(--radius-sm);">
+              <div class="stat-label">Model Architecture</div>
+              <div style="font-size: 18px; font-weight: 700; color: var(--primary-dark);" id="ml-model-name">Random Forest</div>
+              <div class="stat-subtext" id="ml-split-samples">Train: -- | Test: --</div>
+            </div>
+            <div style="background: var(--mint-subtle); padding: 14px; border-radius: var(--radius-sm);">
+              <div class="stat-label">Model MAE (Meals)</div>
+              <div style="font-size: 24px; font-weight: 700; color: var(--primary-accent);" id="ml-mae">--</div>
+              <div class="stat-subtext" id="ml-baseline-mae">Baseline MAE: --</div>
+            </div>
+            <div style="background: var(--mint-subtle); padding: 14px; border-radius: var(--radius-sm);">
+              <div class="stat-label">Model RMSE (Meals)</div>
+              <div style="font-size: 24px; font-weight: 700; color: var(--primary-accent);" id="ml-rmse">--</div>
+              <div class="stat-subtext" id="ml-baseline-rmse">Baseline RMSE: --</div>
+            </div>
+            <div style="background: var(--mint-subtle); padding: 14px; border-radius: var(--radius-sm);">
+              <div class="stat-label">MAE Improvement</div>
+              <div style="font-size: 24px; font-weight: 700; color: var(--success);" id="ml-improvement">--%</div>
+              <div class="stat-subtext">vs Historical Median Baseline</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <!-- Interactive Predictor Form -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Interactive Demand Forecaster</h3>
+            </div>
+            <form id="predict-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="pred-target-date">Target Date *</label>
+                  <input type="date" id="pred-target-date" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="pred-menu-item">Menu Item *</label>
+                  <select id="pred-menu-item" class="form-select" required>
+                    <option value="Veg Thali">Veg Thali</option>
+                    <option value="Chicken Biryani">Chicken Biryani</option>
+                    <option value="Dal Makhani & Rice">Dal Makhani & Rice</option>
+                    <option value="Paneer Roll & Salad">Paneer Roll & Salad</option>
+                    <option value="Pasta Alfredo & Bread">Pasta Alfredo & Bread</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="pred-event">Special Event</label>
+                  <select id="pred-event" class="form-select">
+                    <option value="None">None (Standard Day)</option>
+                    <option value="Tech Symposium">Tech Symposium</option>
+                    <option value="Annual Sports Meet">Annual Sports Meet</option>
+                    <option value="Midterm Exams">Midterm Exams</option>
+                    <option value="Cultural Fest">Cultural Fest</option>
+                    <option value="Monsoon Heavy Rain">Monsoon Heavy Rain</option>
+                  </select>
+                </div>
+                <div class="form-group" style="display: flex; align-items: center; gap: 8px; margin-top: 28px;">
+                  <input type="checkbox" id="pred-holiday" style="width: 18px; height: 18px;">
+                  <label for="pred-holiday" style="font-size: 13px; font-weight: 600;">Campus Holiday</label>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                🔮 Run Demand Forecast
+              </button>
+            </form>
+
+            <!-- Forecast Output Box -->
+            <div id="pred-output-box" style="display: none; margin-top: 20px; padding: 18px; background: var(--mint-subtle); border-radius: var(--radius-sm); border-left: 4px solid var(--primary-accent);">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="stat-label">Predicted Demand</span>
+                <span class="badge badge-success" id="pred-output-model">Model</span>
+              </div>
+              <div style="font-size: 32px; font-weight: 800; color: var(--primary-dark); margin: 6px 0;" id="pred-output-val">
+                -- meals
+              </div>
+              <div style="font-size: 13px; color: var(--text-secondary); margin-bottom: 10px;" id="pred-output-range">
+                Confidence Interval: --
+              </div>
+              <div style="font-size: 12px; color: var(--text-muted);" id="pred-output-insights">
+                <!-- Insights bullets -->
+              </div>
+              <button class="btn btn-outline btn-sm" style="margin-top: 12px;" id="pred-btn-send-planner">
+                Send to Preparation Planner →
+              </button>
+            </div>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Recent Actual vs Predicted Comparisons</h3>
+            </div>
+            <div class="table-responsive" style="max-height: 480px;">
+              <table class="data-table" id="table-prediction-eval">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Item</th>
+                    <th>Sold</th>
+                    <th>Predicted</th>
+                    <th>Abs Error</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td colspan="5" style="text-align: center; color: var(--text-muted);">No predictions loaded</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================== -->
+      <!-- VIEW D: SMART PREPARATION PLANNER -->
+      <!-- ======================================================== -->
+      <section id="view-planner" class="view-section">
+        <div class="grid-cols-2">
+          <!-- Configuration Card -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Kitchen Batch Preparation Planner</h3>
+            </div>
+            <form id="planner-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="plan-date">Target Date *</label>
+                  <input type="date" id="plan-date" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="plan-item">Menu Item *</label>
+                  <select id="plan-item" class="form-select" required>
+                    <option value="Veg Thali">Veg Thali</option>
+                    <option value="Chicken Biryani">Chicken Biryani</option>
+                    <option value="Dal Makhani & Rice">Dal Makhani & Rice</option>
+                    <option value="Paneer Roll & Salad">Paneer Roll & Salad</option>
+                    <option value="Pasta Alfredo & Bread">Pasta Alfredo & Bread</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="plan-predicted-override">Demand Prediction (Auto or Manual Override)</label>
+                <input type="number" id="plan-predicted-override" class="form-input" placeholder="Leave empty to use ML predicted demand">
+                <div class="form-help">Leave blank to auto-forecast using trained Random Forest model.</div>
+              </div>
+
+              <div class="form-group">
+                <div style="display: flex; justify-content: space-between;">
+                  <label class="form-label" for="plan-buffer-slider">Safety Buffer: <strong id="plan-buffer-display">10%</strong></label>
+                </div>
+                <input type="range" id="plan-buffer-slider" min="0" max="30" step="1" value="10" style="width: 100%;">
+                <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-muted);">
+                  <span>0% (Zero waste target)</span>
+                  <span>10% (Balanced)</span>
+                  <span>30% (High availability)</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="plan-stockout-weight">Stockout Penalty Weight</label>
+                  <select id="plan-stockout-weight" class="form-select">
+                    <option value="1.0">1.0x (Standard)</option>
+                    <option value="1.2" selected>1.2x (Hungry student penalty)</option>
+                    <option value="1.5">1.5x (Strict campus SLA)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="plan-waste-weight">Waste Penalty Weight</label>
+                  <select id="plan-waste-weight" class="form-select">
+                    <option value="1.0" selected>1.0x (Standard cost)</option>
+                    <option value="1.3">1.3x (High environmental penalty)</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                📋 Compute Preparation Quantity
+              </button>
+            </form>
+          </div>
+
+          <!-- Planner Result Card -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Recommended Preparation Quantity</h3>
+              <span class="badge badge-success" id="plan-status-badge">Ready</span>
+            </div>
+            
+            <div id="plan-result-container">
+              <div style="text-align: center; padding: 40px; color: var(--text-muted);">
+                Select target date and menu item to compute tailored kitchen preparation guidance.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plan History -->
+        <div class="card" style="margin-top: 24px;">
+          <div class="card-header">
+            <h3 class="card-title">Recent Kitchen Preparation Plans</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-plan-history">
+              <thead>
+                <tr>
+                  <th>Target Date</th>
+                  <th>Menu Item</th>
+                  <th>Predicted Demand</th>
+                  <th>Buffer</th>
+                  <th>Recommended Prep</th>
+                  <th>Rationale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td colspan="6" style="text-align: center; color: var(--text-muted);">No preparation plans generated yet</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================== -->
+      <!-- VIEW E: AI FOOD-WASTE ADVISOR -->
+      <!-- ======================================================== -->
+      <section id="view-advisor" class="view-section">
+        <!-- Advisor Banner -->
+        <div class="card" style="margin-bottom: 24px; border-left: 5px solid var(--primary-accent);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+                <h2 style="font-size: 18px; color: var(--primary-dark);">Operational Advisory Briefing</h2>
+                <span class="badge badge-info" id="advisor-mode-badge">Local Expert Rule Engine</span>
+              </div>
+              <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;" id="advisor-executive-summary">
+                Loading audit findings...
+              </p>
+            </div>
+            <button class="btn btn-outline btn-sm" id="btn-refresh-advisor">🔄 Refresh Analysis</button>
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <!-- Priority Action Items -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">High Priority Action Items</h3>
+            </div>
+            <div id="advisor-action-items">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Surplus Reduction Targets -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Surplus Items Calibration Targets</h3>
+            </div>
+            <div class="table-responsive">
+              <table class="data-table" id="table-surplus-targets">
+                <thead>
+                  <tr>
+                    <th>Menu Item</th>
+                    <th>Surplus Rate</th>
+                    <th>Action</th>
+                    <th>Annual Avoided kg</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td colspan="4" style="text-align: center; color: var(--text-muted);">Analyzing records...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Safe Redistribution Protocol Card -->
+        <div class="card" style="margin-top: 24px;">
+          <div class="card-header">
+            <h3 class="card-title">Safe Surplus Food Redistribution Protocol</h3>
+            <span class="badge badge-success">Food Safety Standard</span>
+          </div>
+          <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.8;" id="advisor-redistribution-content">
+            <!-- Dynamic protocol checklist -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================== -->
+      <!-- VIEW F: WASTE ANALYTICS & IMPACT TRACKING -->
+      <!-- ======================================================== -->
+      <section id="view-analytics" class="view-section">
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Longitudinal Impact Tracking (Baseline vs Optimized)</h3>
+              <p style="font-size: 13px; color: var(--text-muted);">Measuring verified canteen outcomes before and after data-driven demand planning</p>
+            </div>
+          </div>
+
+          <div class="grid-cols-4">
+            <div class="card stat-card stat-success">
+              <div class="stat-label">Estimated Avoided Waste</div>
+              <div class="stat-value" id="impact-avoided-kg">-- kg</div>
+              <div class="stat-subtext">Prevented through calibrated batching</div>
+            </div>
+            <div class="card stat-card stat-success">
+              <div class="stat-label">Estimated Cost Saved</div>
+              <div class="stat-value" id="impact-cost-saved">₹--</div>
+              <div class="stat-subtext">Unspent raw ingredient budget</div>
+            </div>
+            <div class="card stat-card stat-info">
+              <div class="stat-label">Relative Waste Reduction</div>
+              <div class="stat-value" id="impact-reduction-pct">--%</div>
+              <div class="stat-subtext">Normalized per 1,000 meals served</div>
+            </div>
+            <div class="card stat-card stat-info">
+              <div class="stat-label">Surplus Rate Drop</div>
+              <div class="stat-value" id="impact-surplus-drop">--%</div>
+              <div class="stat-subtext">From baseline over-preparation</div>
+            </div>
+          </div>
+
+          <div class="grid-cols-2" style="margin-top: 16px;">
+            <div style="background: #f9fafb; padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <h4 style="font-size: 14px; font-weight: 700; color: var(--primary-dark); margin-bottom: 10px;" id="impact-baseline-title">Historical Baseline Period</h4>
+              <p style="font-size: 13px; color: var(--text-secondary);" id="impact-baseline-stats">Loading statistics...</p>
+            </div>
+            <div style="background: var(--mint-subtle); padding: 16px; border-radius: var(--radius-sm); border: 1px solid #bbf7d0;">
+              <h4 style="font-size: 14px; font-weight: 700; color: var(--primary-dark); margin-bottom: 10px;" id="impact-optimized-title">PlateWise_AI Period</h4>
+              <p style="font-size: 13px; color: var(--text-secondary);" id="impact-optimized-stats">Loading statistics...</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 16px; font-size: 11px; color: var(--text-muted); font-style: italic;">
+            * Clarification: Discarded food values represent direct physical measurements. Avoided waste values are counterfactual estimates computed against the verified historical baseline rate.
+          </div>
+        </div>
+
+        <!-- Menu Item Waste Breakdown Table -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Comprehensive Menu Item Waste Breakdown</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-menu-item-breakdown">
+              <thead>
+                <tr>
+                  <th>Menu Item</th>
+                  <th>Category</th>
+                  <th>Meals Cooked</th>
+                  <th>Meals Sold</th>
+                  <th>Unsold Portions</th>
+                  <th>Waste Rate (%)</th>
+                  <th>Discarded Food (kg)</th>
+                  <th>Est. Cost Impact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td colspan="8" style="text-align: center; color: var(--text-muted);">Loading item breakdown...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================== -->
+      <!-- VIEW G: DATA MANAGEMENT -->
+      <!-- ======================================================== -->
+      <section id="view-data" class="view-section">
+        <!-- Controls Card -->
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <h3 class="card-title">Historical Records Filter & Export</h3>
+            <div style="display: flex; gap: 8px;">
+              <a href="/api/csv/template" class="btn btn-outline btn-sm" download>📥 Download CSV Template</a>
+              <a href="/api/csv/export" class="btn btn-outline btn-sm" download>📤 Export Records to CSV</a>
+              <button class="btn btn-primary btn-sm" id="btn-open-upload-modal">📁 Upload CSV</button>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="filter-menu-item">Filter by Menu Item</label>
+              <input type="text" id="filter-menu-item" class="form-input" placeholder="e.g. Biryani">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="filter-date-from">From Date</label>
+              <input type="date" id="filter-date-from" class="form-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="filter-date-to">To Date</label>
+              <input type="date" id="filter-date-to" class="form-input">
+            </div>
+            <div class="form-group" style="align-self: flex-end;">
+              <button class="btn btn-primary" id="btn-apply-filter" style="width: 100%;">Filter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Historical Records Table -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title" id="data-records-count">Historical Records (0)</h3>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <button class="btn btn-outline btn-sm" id="btn-prev-page">« Previous</button>
+              <span id="data-page-indicator" style="font-size: 13px; font-weight: 600;">Page 1</span>
+              <button class="btn btn-outline btn-sm" id="btn-next-page">Next »</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-all-records">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Date</th>
+                  <th>Menu Item</th>
+                  <th>Category</th>
+                  <th>Prepared</th>
+                  <th>Sold</th>
+                  <th>Discarded kg</th>
+                  <th>Event</th>
+                  <th>Notes</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td colspan="10" style="text-align: center; color: var(--text-muted);">No records found</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Modals -->
+  <!-- Edit Record Modal -->
+  <div id="modal-edit-record" class="modal-overlay">
+    <div class="modal-dialog">
+      <h3 style="font-size: 18px; margin-bottom: 16px;">Edit Meal Record</h3>
+      <form id="form-edit-record">
+        <input type="hidden" id="edit-record-id">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Date</label>
+            <input type="text" id="edit-record-date" class="form-input" readonly>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Menu Item</label>
+            <input type="text" id="edit-record-item" class="form-input" readonly>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Meals Prepared</label>
+            <input type="number" id="edit-record-prepared" class="form-input" required min="0">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Meals Sold</label>
+            <input type="number" id="edit-record-sold" class="form-input" required min="0">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Edible Leftovers</label>
+            <input type="number" id="edit-record-leftover" class="form-input" min="0">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Discarded (kg)</label>
+            <input type="number" step="0.1" id="edit-record-discarded" class="form-input" min="0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Notes</label>
+          <input type="text" id="edit-record-notes" class="form-input">
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+          <button type="button" class="btn btn-outline" onclick="window.closeModal('modal-edit-record')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- CSV Upload Modal -->
+  <div id="modal-upload-csv" class="modal-overlay">
+    <div class="modal-dialog">
+      <h3 style="font-size: 18px; margin-bottom: 12px;">Upload Meal Records CSV</h3>
+      <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
+        Upload daily records formatted according to the WasteWise template. Rows with duplicate (date, menu_item) will be safely skipped.
+      </p>
+      <form id="form-upload-csv">
+        <div class="form-group">
+          <input type="file" id="csv-file-input" class="form-input" accept=".csv" required>
+        </div>
+        <div id="upload-result-feedback" style="display: none; margin-top: 12px; font-size: 13px;"></div>
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+          <button type="button" class="btn btn-outline" onclick="window.closeModal('modal-upload-csv')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Upload & Process</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="/static/js/app.js"></script>
+  <script src="/static/js/dashboard.js"></script>
+  <script src="/static/js/entry.js"></script>
+  <script src="/static/js/prediction.js"></script>
+  <script src="/static/js/planner.js"></script>
+  <script src="/static/js/advisor.js"></script>
+  <script src="/static/js/analytics.js"></script>
+  <script src="/static/js/data_mgmt.js"></script>
+</body>
+</html>
